@@ -1,0 +1,18 @@
+version: '2'
+services:
+
+    tesseract:
+        image: 'inetsoftware/alpine-tesseract'
+
+    tesseract-master:
+        image: 'inetsoftware/alpine-tesseract:master'
+
+    tesseract-tess4j:
+        image: 'inetsoftware/alpine-tesseract:tess4j'
+        environment:
+          - ADDITIONAL_OPTIONS= --disable-openmp
+
+    tesseract-master-tess4j:
+        image: 'inetsoftware/alpine-tesseract:master-tess4j'
+        environment:
+          - ADDITIONAL_OPTIONS= --disable-openmp
